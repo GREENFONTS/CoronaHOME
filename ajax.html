@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number-History</title>
+    <!--Lastest compiled and minified css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!--jQuery Library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--Popper JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!--Lastest complied javascript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./ajax.css">
+</head>
+<body>
+    <div class="container-fluid" id="mainContainer">
+        <div class="container " id="body">
+                <div class="jumbotron" id="label">
+                    <h1>NUMBER ETYMOLOGY</h1>
+                    <h4>Discover the history of the number we use in these civilization </h4>
+                <div class="form" role="form" id="money">
+                    <div class="form-group"> 
+                        <label for="name">Select the Number Type</label> 
+                        <select class="form-control" id="Select" onchange="handleChange()">
+                        <option>math</option>
+                        <option>random</option>
+                        <option>date</option>
+                        <option>trivia</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Date Format: mm/dd </label>
+                        <input type="tel" placeholder="Enter number" id="Name" onchange="handleChange()" class="form-control">
+                    </div>
+                    <span><button class="btn btn-primary btn-lg" role="button" id="submitbtn"> Submit</button></span>
+                    
+                    <div id="NumContent"></div>
+        
+                </div>
+        </div>
+    </div>
+    </div>
+   
+    <script src="ajax.js"></script>
+</body>
+</html>
