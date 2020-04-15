@@ -33,19 +33,12 @@ function handleChange() {
 // }
 
 function Loadata(select, value) {
-    return new Promise(resolve => {
-        fetch(`http://numbersapi.com/${select == 'random' ? "random/" : ""}${value} ${select == 'random' ? "" : "/" + select}`)
-            .then((res) => res.json())
-            .then((data) => {
-                document.getElementById("NumContent").innerHTML = data.text
-
-            })
-    })
-
+    fetch(`http://numbersapi.com/${select == 'random' ? "random/" : ""}${parseInt(value)}${select == 'random' ? '' : "/" + select}?json`)
+        .then((res) => {
+            return res.json()
+        })
+        .then((data) => {
+            document.getElementById("NumContent").innerHTML = data.text
+        })
 }
-
-
-button.addEventListener('click', Loadata(UserInput.SelectOption, 2).then(res => res))
-
-
-
+button.addEventListener('click', () => { Loadata(UserInput.SelectOption, UserInput.Input)})
